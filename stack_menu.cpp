@@ -1,4 +1,5 @@
-#include <iostream>
+
+#include<conio.h>
 using namespace std;
 
 class Stack {
@@ -10,14 +11,14 @@ class Stack {
     }
     
   void push(int t) {
-  	cout << "Push "<<t<<": \n";
+ 
     if (top == maxelem) 
 		return;
     s[top++] = t;
   }
   
   int pop() {
-  	cout << "Pop: \n";
+
     if (top == 0) 
 		return -1;
     return s[--top];
@@ -44,44 +45,42 @@ class Stack {
 };
 
 void menu(){
-	cout << "What would you like to do?: \n";
+	cout << "What Operation would you like to use?\n" << endl;
 	cout << "1: Push \n";
 	cout << "2: Pop \n";
-	cout << "3: Display \n";
+	cout << "3: Display \n"; 
 	cout << "4: Exit \n";
 	
 }
 
 int main() {
   Stack * s = new Stack(100);
-  int choice;
-  int x;
-  int d=1;
-  do{
-  system("cls");
-  menu();
-  
-  
-  cin >> choice;
-  switch (choice)
-  {
-  		case 1: cout << "What number to push? " << endl;
-  			cin >> x;
-  			s -> push(x);
-  			break;
-  			
-  		case 2: s -> pop();
-  			break;
-  		case 3: s -> display();
-  			cout << endl;
-  			system("pause");
-  			break;again
-  		case 4: exit(1);
-  		default : cout << " Wrong input " << endl;
-  			  system("pause");
-  			  d=0;
-  }
-}while(d=1);
-
-  return 0;
+	int choice, a;
+	while(1){
+		system("cls");
+		menu();
+		cout<<"Enter choice: ";
+		cin>>choice;
+		switch(choice){
+		case 1:{
+			cout<<"Enter number: ";
+			cin>>a;
+			s -> push(a);
+			break;
+		}
+		case 2:{
+			cout<<"\nSuccesfully removed from stack!~";
+			s -> pop();
+			break;
+		}
+		case 3:{
+			s -> display();
+			break;
+		}
+		case 4: exit(1);
+		default: break;
+	}
+	getch();
+}	
+ return 1;
 }
