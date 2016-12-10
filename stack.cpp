@@ -65,19 +65,19 @@ int main() {
   cin >> choice;
   switch (choice)
   {
-  	case 1: cout << "What number to push? " << endl;
+  		case 1: cout << "What number to push? " << endl;
   			cin >> x;
   			s -> push(x);
   			break;
   			
-  	case 2: s -> pop();
+  		case 2: s -> pop();
   			break;
-  	case 3: s -> display();
+  		case 3: s -> display();
   			cout << endl;
   			system("pause");
-  			break;
-  	case 4: exit(1);
-  	default : cout << "Invalid Input please try again" << endl;
+  			break;again
+  		case 4: exit(1);
+  		default : cout << " Wrong input " << endl;
   			  system("pause");
   			  d=0;
   }
