@@ -46,6 +46,7 @@ class Stack {
 
 void menu(){
 	cout << "What would you like to do?: \n";
+	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n";
 	cout << "1: Push \n";
 	cout << "2: Pop \n";
 	cout << "3: Display \n";
@@ -59,7 +60,7 @@ int main() {
 	while(1){
 		system("cls");
 		menu();
-		cout<<"============\n";
+		cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
 		cout<<"Enter choice: ";
 		cin>>choice;
 		switch(choice){
