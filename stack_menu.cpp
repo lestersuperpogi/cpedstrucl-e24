@@ -1,4 +1,4 @@
-
+#include<iostream>
 #include<conio.h>
 using namespace std;
 
@@ -11,14 +11,14 @@ class Stack {
     }
     
   void push(int t) {
- 
+  //	cout << "Push "<<t<<": \n";
     if (top == maxelem) 
 		return;
     s[top++] = t;
   }
   
   int pop() {
-
+  //	cout << "Pop: \n";
     if (top == 0) 
 		return -1;
     return s[--top];
@@ -45,10 +45,10 @@ class Stack {
 };
 
 void menu(){
-	cout << "What Operation would you like to use?\n" << endl;
+	cout << "What would you like to do?: \n";
 	cout << "1: Push \n";
 	cout << "2: Pop \n";
-	cout << "3: Display \n"; 
+	cout << "3: Display \n";
 	cout << "4: Exit \n";
 	
 }
@@ -59,28 +59,29 @@ int main() {
 	while(1){
 		system("cls");
 		menu();
+		cout<<"============\n";
 		cout<<"Enter choice: ";
 		cin>>choice;
 		switch(choice){
-		case 1:{
-			cout<<"Enter number: ";
-			cin>>a;
-			s -> push(a);
-			break;
+			case 1:{
+				cout<<"Enter number: ";
+				cin>>a;
+				s -> push(a);
+				break;
+			}
+			case 2:{
+				cout<<"\nSuccesfully removed!";
+				s -> pop();
+				break;
+			}
+			case 3:{
+				s -> display();
+				break;
+			}
+			case 4: exit(1);
+			default: break;
 		}
-		case 2:{
-			cout<<"\nSuccesfully removed from stack!~";
-			s -> pop();
-			break;
-		}
-		case 3:{
-			s -> display();
-			break;
-		}
-		case 4: exit(1);
-		default: break;
-	}
-	getch();
-}	
- return 1;
+		getch();
+	}	
+  return 1;
 }
