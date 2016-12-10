@@ -1,7 +1,7 @@
 #include <iostream>
-
-int main(int argc, char** argv) {
-	std::cout << "Hello world!\n";
-	std::cout << "cpestructl!\n";
-	return 0;
-}
+using namespace std;
+int main()
+{
+	cout<<"Hello World";
+	cout<<"\ncpedatastructl";
+ return 0;
