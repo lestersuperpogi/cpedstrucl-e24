@@ -6,4 +6,5 @@ int main(){
 	for(int i=0; i<5; i++){
 		cout<<ar[i]<<endl;
 	}
-	return
+	return 0;
+}
