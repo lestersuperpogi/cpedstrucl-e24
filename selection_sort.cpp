@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-	int A[ ] = {35,10,55,20,5};
+	int A[ ] = {30,40,20,50,10};
 	int n=5;
 		for(int i=0;i<n-1;i++){
 			int min = A[i], index = 1;
